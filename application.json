@@ -45,12 +45,7 @@
     "storage" : {
       "type" : "mongo",
       "config" : {
-        "db" : "LiveOakExamples-HelloScript",
-        "servers" : [ {
-          "host" : "localhost",
-          "port" : 27017
-        } ],
-        "credentials" : [ ]
+        "db" : "LiveOakExamples-HelloScript"
       }
     },
     "scripts" : {
