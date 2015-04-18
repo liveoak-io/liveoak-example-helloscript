@@ -2,7 +2,7 @@
   "libraries" : [ "client" ],
   "name" : "HelloWorldScript",
   "description" : "Simple script to add a message to the log whenever any resource is read",
-  "target-path" : "/helloscript/**",
+  "target-path" : "/${application.id}/**",
   "enabled" : true,
   "priority" : 1
 }

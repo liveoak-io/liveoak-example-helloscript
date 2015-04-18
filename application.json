@@ -1,6 +1,5 @@
 {
-  "id" : "helloscript",
-  "name" : "helloscript",
+  "name" : "${application.id}",
   "example" : "helloscript",
   "resources" : {
     "client" : {
@@ -18,11 +17,11 @@
       "config" : {
         "policies" : [ {
           "policyName" : "URIPolicy",
-          "policyResourceEndpoint" : "/helloscript/uri-policy/authzCheck"
+          "policyResourceEndpoint" : "/${application.id}/uri-policy/authzCheck"
         }, {
           "policyName" : "ACLPolicy",
-          "policyResourceEndpoint" : "/helloscript/acl-policy/authzCheck",
-          "includedResourcePrefixes" : [ "/helloscript" ]
+          "policyResourceEndpoint" : "/${application.id}/acl-policy/authzCheck",
+          "includedResourcePrefixes" : [ "/${application.id}" ]
         } ]
       }
     },
@@ -45,7 +44,7 @@
     "storage" : {
       "type" : "mongo",
       "config" : {
-        "db" : "LiveOakExamples-HelloScript"
+        "db" : "${application.id}"
       }
     },
     "scripts" : {
